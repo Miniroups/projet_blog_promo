@@ -1,5 +1,8 @@
-<?php 
+<?php
+use app\autoload;
 
-require '../router.php';
+require '../app/Autoload.php';
+
+Autoload::register();
 
 $router = new Router();
