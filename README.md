@@ -22,4 +22,4 @@ Organisation et nomenclature :
 
   Les fonctions, classes PHP/JS et variables seront écrites en camelCase de préférence en anglais.
   Les classes CSS seront écrites avec un tiret si composée de plusieurs mot de préférence en anglais.
-  Les classes/id CSS créés pour utilisation JS doivent faire mention de JS dans leurs nom ex : JS-class.
+  Les classes/id CSS créées pour l'utilisation du Javascript doivent faire mention de JS dans leurs nom ex : JS-class.
