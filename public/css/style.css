@@ -492,6 +492,47 @@ body {
 .content.article-show .show-comments article p {
     padding: 1rem;
 }
+
+.panel-login {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.panel-login .zone {
+    display: table-cell;
+    vertical-align: middle;
+}
+.panel-login .zone h1 {
+    text-align:center;
+    padding: 20px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+.panel-login .zone .login {
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+
+    color: rgb(82, 82, 82);
+}
+
+.panel-login .zone .login input {
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.panel-login .zone .login label {
+    margin-bottom: 5px;
+}
+.panel-login .zone .login label svg {
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 2px;
+}
 /* NOTE David */
 
 /* Page liste des articles */
