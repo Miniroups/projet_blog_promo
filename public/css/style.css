@@ -409,6 +409,7 @@ nav.navbar {
 .content {
     display: flex;
     flex-grow: 2;
+    flex-direction: column;
 }
 
 /* NOTE Yanek */
@@ -418,11 +419,11 @@ nav.navbar {
 
 /*  NOTE Rodrigo */
 
-.head-article {
+.content.article-show .head-article {
     background-color: red;
     padding: 50px;
 }
 
-section.article {
+.content.article-show section.article {
     background-color: blue;
 }
