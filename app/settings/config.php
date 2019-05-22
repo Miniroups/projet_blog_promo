@@ -1,6 +1,6 @@
 <?php
 /**
-* @Model
+* NOTE Model
 * Settings de la class model et de la base de données
 */
 // Nom d'Hôte

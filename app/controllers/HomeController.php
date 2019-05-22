@@ -5,7 +5,7 @@ namespace app\controllers;
 /**
  *
  */
-class IndexController extends Controller
+class HomeController extends Controller
 {
 
   protected function index() {
