@@ -420,12 +420,37 @@ nav.navbar {
 /*  NOTE Rodrigo */
 
 .content.article-show .head-article {
-    background-color: red;
-    padding: 50px;
+    height: 20rem;
+    text-align: center;
+    position: relative;
 }
 
+.content.article-show .head-article .background {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -5;
+    min-height: 0;
+}
+
+.content.article-show .head-article h1 {
+    padding: 1rem 3rem;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5rem;
+}
 .content.article-show section.article {
-    background-color: blue;
+    padding: 2rem 1rem;
+}
+.content.article-show section.article article {
+    padding: 2rem;
+    background-color: #ededed;
+    color: rgb(59, 59, 59);
 }
 
 /* NOTE David */
