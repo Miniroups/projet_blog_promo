@@ -402,8 +402,13 @@ body {
 }
 
 nav.navbar {
-    position: fixed;
+    /* position: fixed; */
     width: 100vw;
+}
+
+.content {
+    display: flex;
+    flex-grow: 2;
 }
 
 /* NOTE Yanek */
@@ -413,4 +418,11 @@ nav.navbar {
 
 /*  NOTE Rodrigo */
 
+.head-article {
+    background-color: red;
+    padding: 50px;
+}
 
+section.article {
+    background-color: blue;
+}
