@@ -2,9 +2,10 @@
 
 namespace app;
 
+require_once 'settings/settings.php';
+
 class Autoload
 {
-    const EXTENSION = '.php';
 
     public static function register()
     {
@@ -16,7 +17,7 @@ class Autoload
         if (strpos($class, __NAMESPACE__ . '\\') === 0) {
             $class = str_replace(__NAMESPACE__.'\\', '', $class);
             $class = str_replace('\\', '/', $class);
-            require 'app/'.$class.self::EXTENSION;
+            require DIR_ROOT.$class.'.php';
         }
     }
 }
