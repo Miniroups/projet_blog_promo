@@ -45,8 +45,9 @@ class View
         for ($i=0; $i < count($this->file) ; $i++) {
             $this->content .= $this->createFile($this->file[$i], $data);
         }
+        $vue = $this->createFile(DIR_ROOT.'views/default.php',[$this->content]);
         // afiche le tout
-        echo $this->content;
+        echo $vue;
     }
     /**
     *@param string $file : file path
