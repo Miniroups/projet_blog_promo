@@ -585,3 +585,16 @@ nav.navbar{
 }
 
 /* Fin de la page liste des articles */
+
+/* Page profil des utilisateurs */
+
+#avatar {
+    overflow:hidden;
+    border-radius:50%;
+    width:100px;
+    height:190px;
+}
+
+#infos {
+    margin: 10px;
+}
