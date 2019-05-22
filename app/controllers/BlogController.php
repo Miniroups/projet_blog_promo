@@ -18,7 +18,8 @@ class BlogController extends Controller
   {
     $this->template = 'blog/creation-article';
   }
-  // URL d'acces à utiliser : /Blog/edit
+  // URL d'acces à utiliser : /Blog/new
+  // pas de paramètre
   protected function new($value='')
   {
       $this->edit('');

@@ -10,12 +10,12 @@ class UserController extends Controller
   // URL d'acces à utiliser : /user
   // param : id de l'utilisateur
   protected function index() {
-
+    $this->template = 'user/profil';
   }
   // URL d'acces à utiliser : /user/edit
   // param : id de l'utilisateur
-  public function edit($value='')
+  public function edit($param)
   {
-    // code...
+    $this->template = 'user/inscription';
   }
 }
