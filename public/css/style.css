@@ -24,6 +24,22 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+h1 {
+    font-size: 2.1em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
     outline: 0;
@@ -366,6 +382,30 @@ textarea {
     padding: 0.2em 0;
 }
 
+/* .navbar .navbar-brand .logo {
+    width: 10rem;
+    height: auto;
+} */
+
+#footer {
+    background-color: #4E5D6C;
+    padding: 1rem;
+    /* display: flex;
+    align-self: flex-end; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: self-end; */
+    justify-content: space-between;
+}
+
+nav.navbar {
+    position: fixed;
+    width: 100vw;
+}
+
 /* NOTE Yanek */
 
 
@@ -374,19 +414,3 @@ textarea {
 /*  NOTE Rodrigo */
 
 
-#footer {
-    background-color: #4E5D6C;
-    padding: 1rem;
-    display: flex;
-    align-self: flex-end;
-}
-
-body {
-    display: flex;
-    flex
-}
-
-nav.navbar {
-    position: fixed;
-    width: 100vw;
-}

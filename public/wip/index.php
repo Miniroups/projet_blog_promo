@@ -16,6 +16,8 @@
         <script src="./js/script.js"></script>
     </head>
     <body>
-
+    <?php include_once('./include_header.php');?>
+    BLABLA 
+    <?php include_once('./include_footer.php');?>
     </body>
 </html>
