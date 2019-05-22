@@ -2,7 +2,7 @@
 
 namespace app;
 
-use app\controllers\IndexController;
+use app\controllers\HomeController;
 class Router {
 
     public function __construct($url) {
