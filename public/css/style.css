@@ -461,6 +461,7 @@ body {
 }
 .content.article-show section.article article {
     padding: 2rem;
+    font-size: 1.2em;
 }
 .content.article-show .new-comment {
 
