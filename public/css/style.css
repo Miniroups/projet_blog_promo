@@ -457,3 +457,61 @@ nav.navbar{
 .content.article-show section.article {
     background-color: blue;
 }
+
+/* NOTE David */
+
+/* Page liste des articles */
+
+#mainArticle a.btn.btn-info, #allArticle a.btn.btn-info {
+    float: right;
+    background-color: #63af36;
+    border: 1px solid #407a1e;
+    border-radius: 2px;  
+}
+
+#mainArticle a.btn.btn-info:hover, #allArticle a.btn.btn-info:hover {
+    background-color: #407a1e;
+    border: 1px solid #63af36;
+}
+
+#allArticle .button-center {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+#allArticle .button-center a {
+    width: 30%;
+}
+
+#mainArticle {
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainArticle .row {
+    padding: .7em;
+    background-color: #222;
+}
+
+#mainArticle .row .col-5 {
+    padding-left: 0;
+}
+
+#allArticle .row .col {
+    margin: .5em;
+    padding: .7em;
+    background-color: #222;
+}
+
+/* Margin left sur les articles en position 1 */
+#allArticle .row .col:nth-child(1) {
+    margin-left: 0;
+}
+
+/* Margin right sur les articles en position 3 */
+#allArticle .row .col:nth-child(1n+3) {
+    margin-right: 0;
+}
+
+/* Fin de la page liste des articles */
