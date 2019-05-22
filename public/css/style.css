@@ -40,6 +40,10 @@ h4 {
     font-size: 1.2em;
 }
 
+b {
+    font-weight: 500;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
     outline: 0;
@@ -401,10 +405,6 @@ body {
     justify-content: space-between;
 }
 
-nav.navbar {
-    /* position: fixed; */
-    width: 100vw;
-}
 
 .content {
     display: flex;
@@ -441,18 +441,56 @@ nav.navbar {
     background-color: rgba(0,0,0,0.3);
     color: #fff;
     display: inline-block;
-    border-radius: 5px;
-    margin: 5rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.content.article-show .head-article .meta {
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 0px;
+    right: 0px;
 }
 .content.article-show section.article {
     padding: 2rem 1rem;
 }
+.content.article-show section.article p {
+    font-size: 1.2em;
+}
 .content.article-show section.article article {
     padding: 2rem;
-    background-color: #ededed;
-    color: rgb(59, 59, 59);
 }
+.content.article-show .new-comment {
 
+    background-color: #fff;
+    padding: 1rem; 
+    color: rgb(66, 66, 66);
+}
+.content.article-show .new-comment #content, #name {
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-top: 5px;
+}
+.content.article-show .show-comments {
+    padding: 1rem;
+    background-color: #ededed;
+    margin: 1rem 0;
+    color: rgb(66, 66, 66);
+
+}
+.content.article-show .show-comments article {
+    padding: 1rem;
+    font-size: 1.2em;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    margin: 1rem 0;
+}
+.content.article-show .show-comments article h4 small {
+    font-size: 0.8em; 
+}
+.content.article-show .show-comments article p {
+    padding: 1rem;
+}
 /* NOTE David */
 
 /* Page liste des articles */
