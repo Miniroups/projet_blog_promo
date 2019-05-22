@@ -21,19 +21,23 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    line-height: 1.5em;
 }
 
 h1 {
     font-size: 2.1em;
+    font-weight: 400;
 }
 
 h2 {
     font-size: 1.8em;
+    font-weight: 400;
 }
 
 h3 {
     font-size: 1.5em;
+    font-weight: 400;
 }
 
 h4 {
@@ -423,29 +427,95 @@ nav.navbar{
 .nopadding{
     padding-left: 0;
     padding-right: 0;
+  
 }
 
 .video {
-    position: relative;
+    /* position: relative; */
     /* padding-bottom: 56.25%; */
-    padding-bottom: 56.25%;
+    /* padding-bottom: 56.25%;
     padding-top: 0;
     height: 0;
-    overflow: hidden;
-    background: red;
+    overflow: hidden;*/
+
+    height: 60vh;
+
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
 
 
   
 }
+
+.indent{
+    margin-bottom: 1rem;
+}
+
 .video iframe {
-    position: absolute;
-    top: -50vh;
-    left: 0;
+    /* position: absolute;
+    top: 0vh;
+    left: 0; */
    
     width: 100%;
     height: 100%;
+    opacity: .3;
     
 }
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.card-title a{
+    color: inherit;
+
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: unset !important;
+    border: unset !important;
+    border-radius: unset !important;
+
+}
+
+.team a{
+    width: 50%;
+  
+}
+
+.team a img{
+    border-radius: 50%;
+    background: red;
+}
+
+.team .card-body{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.team .card-text{
+    text-align: center;
+}
+
+.stretch{
+    display: flex;
+    align-items: stretch;
+}
+
+
 
 /*  NOTE Rodrigo */
 
