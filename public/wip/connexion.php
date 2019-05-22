@@ -15,7 +15,8 @@
                     <input type="password" class="form-control" id="password">
                 </div>
                 <button type="submit" class="btn btn-success form-control">Se connecter</button>
-            </form>    
+            </form>
+            <a class="register" href="#"><i class="fas fa-chevron-right"></i> S'inscrire</a>  
         </div>
     </div>
 

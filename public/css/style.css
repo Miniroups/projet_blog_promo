@@ -520,7 +520,9 @@ body {
     border-bottom-right-radius: 5px;
     color: rgb(82, 82, 82);
 }
-
+.panel-login .zone .login form {
+    margin-bottom: 10px;
+}
 .panel-login .zone .login input {
     border: 1px solid rgb(170, 170, 170);
 }
