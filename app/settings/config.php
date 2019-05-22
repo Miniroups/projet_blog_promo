@@ -6,7 +6,7 @@
 // Nom d'Hôte
 define("HOST", 'localhost');
 // Nom de la base
-define("DB", 'b3dbdd');
+define("DB", '');
 // Nom d'utilisateur
 define("USER", '');
 // Mot de passe

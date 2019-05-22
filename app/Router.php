@@ -3,18 +3,26 @@
 namespace app;
 
 use app\controllers\IndexController;
-
 class Router {
 
     public function __construct($url) {
         if ($url === '/') {
-            $index = new IndexController('test','');
+            $index = new IndexController(HOMEPAGE,'');
         } else {
-            $requestController  = ucfirst($url[0]);
-            $requestAction      = isset($url[1]) ? $url[1] : '';
-            $requestParam       = array_slice($url, 2);
-
-            $ctrlPath = 'controller/'.$requestController.'.php';
+            // nom du controller
+            $requestedController  = ucfirst($url[0]);
+            // action à effectuer
+            $requestedAction      = isset($url[1]) ? $url[1] : '';
+            // paramètres de l'action
+            $requestedParams       = array_slice($url, 2);
+            // chemin du controller
+            $ctrlPath = DIR_ROOT.'controllers/'.$requestedController.'Controller.php';
+            if (file_exists($ctrlPath)) {
+                $controllerName = "app\\controllers\\".$requestedController.'Controller';
+                $controllerObj  = new $controllerName($requestedAction, $requestedParams);
+            } else {
+                throw new \Exception($ctrlPath.' : '.EXCEPTION_NOT_FOUND);
+            }
         }
     }
 

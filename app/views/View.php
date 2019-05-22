@@ -2,7 +2,6 @@
 
 namespace app\views;
 
-require_once "../app/settings/settings.php";
 
 class View
 {
