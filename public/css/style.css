@@ -515,7 +515,7 @@ body {
 .panel-login .zone .login {
     width: 500px;
     background-color: #fff;
-    padding: 20px;
+    padding: 3rem 2rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     color: rgb(82, 82, 82);
