@@ -7,15 +7,23 @@ abstract class Controller
 {
     protected $view;
     protected $param;
-    protected $action;
+    protected $template;
     protected $data = [];
 
     public function __construct($action, $param = '')
     {
-        $this->action = $action;
+        // paramètre le template comme l'action par défaut
+        $this->template = $action;
+        // récupération des paramètres
         $this->param = $param;
-        $this->index();
-        $this->view = new View($this->action, $this->data);
+        // test si l'action est valide sinon index
+        if (!method_exists($this,$action)) {
+          $action = 'index';
+        }
+        // instancie la méthode lier à l'action
+        $this->$action($param);
+        // instancie la vue
+        $this->view = new View($this->template, $this->data);
     }
     protected abstract function index();
 }
