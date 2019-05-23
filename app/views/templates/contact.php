@@ -1,4 +1,3 @@
-<?php session_start(); ?>
   <!doctype html>
   <html lang="fr">
     <head>
@@ -8,99 +7,65 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
 
-    <body style="padding:100px 0 200px 0">
+    <body style="padding:40px">
 
       <div class="row">
-        <div class="col-8"><!-- FORM COL -->
-          <div style="padding-bottom:100px" class="container">
+        <div class="col-md-8 col-sm-12"><!-- FORM COL -->
+          <div class="container">
             <div class="row justify-content-center">
               <h1>Formulaire de contact</h1>
             </div>
           </div>
           <!-- CONTENT -->
-          <div class="container">
-            <?php if(array_key_exists('success',$_SESSION)): ?>
-              <div class="alert alert-success">Votre email a bien été transmis !</div>
-            <?php endif; ?>
-            
+          <div class="container">            
             <form action="send_form.php" method="post">
 
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="inputname">Votre nom*</label>
-                    <input type="text" name="name" class="form-control" id="inputname" value="<?php echo isset($_SESSION['inputs']['name'])? $_SESSION['inputs']['name'] : ''; ?>">
-                    <?php if(array_key_exists('errors',$_SESSION)): ?>
-                      <div style="color:red">
-                      <?= $_SESSION['errors']['name']; ?>
-                      </div>
-                    <?php endif; ?>
+                    <input type="text" name="name" class="form-control" id="inputname" value="">
                   </div><!--/*.form-group-->
                 </div><!--/*.col-md-6-->
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="inputfirstname">Votre prénom*</label>
-                    <input type="text" name="firstname" class="form-control" id="inputfirstname" value="<?php echo isset($_SESSION['inputs']['firstname'])? $_SESSION['inputs']['firstname'] : ''; ?>">
-                    <?php if(array_key_exists('errors',$_SESSION)): ?>
-                      <div style="color:red">
-                      <?= $_SESSION['errors']['firstname']; ?>
-                      </div>
-                    <?php endif; ?>
+                    <input type="text" name="firstname" class="form-control" id="inputfirstname" value="">
                   </div><!--/*.form-group-->
                 </div><!--/*.col-md-6-->
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="inputemail">Votre email*</label>
-                    <input type="email" name="email" class="form-control" id="inputemail" value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>">
-                    <?php if(array_key_exists('errors',$_SESSION)): ?>
-                      <div style="color:red">
-                      <?= $_SESSION['errors']['email']; ?>
-                      </div>
-                    <?php endif; ?>
+                    <input type="email" name="email" class="form-control" id="inputemail" value="">
                   </div><!--/*.form-group-->
                 </div><!--/*.col-md-6-->
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="inputtel">Votre téléphone</label>
-                    <input type="tel" name="tel" class="form-control" id="inputtel" value="<?php echo isset($_SESSION['inputs']['tel'])? $_SESSION['inputs']['tel'] : ''; ?>">
+                    <input type="tel" name="tel" class="form-control" id="inputtel" value="">
                   </div><!--/*.form-group-->
                 </div><!--/*.col-md-6-->
 
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="titlemessage">Sujet*</label>
-                    <input id="titlemessage" name="title" class="form-control" id="inputtitle" value="<?php echo isset($_SESSION['inputs']['title'])? $_SESSION['inputs']['title'] : ''; ?>">
-                    <?php if(array_key_exists('errors',$_SESSION)): ?>
-                      <div style="color:red">
-                      <?= $_SESSION['errors']['title']; ?>
-                      </div>
-                    <?php endif; ?>
+                    <input id="titlemessage" name="title" class="form-control" id="inputtitle" value="">
                   </div><!--/*.form-group-->
                 </div><!--/*.col-md-12-->
 
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="inputmessage">Votre message*</label>
-                    <textarea id="inputmessage" name="message" class="form-control"><?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?></textarea>
-                    <?php if(array_key_exists('errors',$_SESSION)): ?>
-                      <div style="color:red">
-                      <?= $_SESSION['errors']['message']; ?>
-                      </div>
-                    <?php endif; ?>
+                    <textarea id="inputmessage" name="message" class="form-control"></textarea>
                   </div><!--/*.form-group-->
                 </div><!--/*.col-md-12-->
 
                 <div class="col-md-12">
                   <input type="checkbox" name="rgpd">
                   <label for="rgpd">En cochant cette case, vous reconnaissez avoir consulté et accepté les conditions générales d'utilisation du site*</label>
-                  <?php if(array_key_exists('errors',$_SESSION)): ?>
-                      <div style="color:red">
-                      <?= $_SESSION['errors']['rgpd']; ?>
-                      </div>
-                    <?php endif; ?>
                 </div>
                 <div class="col-md-12">
                   <button type='submit' class='btn btn-primary'>Envoyer</button>
@@ -111,7 +76,7 @@
           <!-- END CONTENT -->
         </div><!-- END FORM COL -->  
 
-        <div id="contact-bloc" class="col-4 sticky-top" style="height: 200px">
+        <div id="contact-bloc" class="col-md-4 col-sm-12 sticky-top" style="height: 200px">
           <h3>Coordonnées</h3>
           <h5>Corrèze digital School</h5>
           <p>22 Avenue du Dr Albert Schweitzer, 19000 Tulle</p>
