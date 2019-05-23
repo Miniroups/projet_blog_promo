@@ -28,9 +28,11 @@ class BlogController extends Controller
       $this->data = $this->model->getOneArticle($this->param);
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['validationArticle'])) {
+      array_pop($_POST);
       if ($new) {
         $this->model->addArticle($_POST);
       } else {
+        array_push($_POST, ['id'=>$this->param]);
         $this->model->updateArticle($_POST);
       }
 

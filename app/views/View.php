@@ -41,7 +41,6 @@ class View
     public function create(array $data)
     {
 
-      var_dump($data);
         // requière le contenu à afficher dans le MainView
         for ($i=0; $i < count($this->file) ; $i++) {
             $this->content .= $this->createFile($this->file[$i], $data);

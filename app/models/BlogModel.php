@@ -31,15 +31,15 @@ class BlogModel extends Model
     return $stm->fetchAll();
   }
 
-  public function addArticle(array $articleData)
+  public function addArticle(array $articleData, int $author)
   {
-    var_dump('nop');
-    // code...
+    array_push($articleData, ['users_id'=>$author]);
+    $this->getData('INSERT INTO articles (id, users_id, title, content, url_img, alt_img, created_at, updated_at) VALUES (NULL, :users_id, :titreArticle, :texteArticle, :imageArticle, :altImgArticle, CURRENT_TIMESTAMP, NULL)',$articleData);
   }
 
   public function updateArticle(array $articleData)
   {
-    var_dump('hello');
+    $this->getData('UPDATE articles SET title = :titreArticle, content = :texteArticle, url_img = :imageArticle, alt_img = :altImgArticle, updated_at = CURRENT_TIMESTAMP WHERE id = :id',$articleData);
   }
 
   public function addComment(array $commentData)
