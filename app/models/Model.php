@@ -1,7 +1,6 @@
 <?php
 namespace app\models;
 
-require_once "../settings/config.php";
 /**
  *
  */

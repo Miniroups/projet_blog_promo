@@ -9,6 +9,7 @@ abstract class Controller
     protected $param;
     protected $template;
     protected $data = [];
+    protected $model;
 
     public function __construct($action, $param = '')
     {
