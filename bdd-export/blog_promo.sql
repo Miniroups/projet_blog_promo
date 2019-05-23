@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mer. 22 mai 2019 à 11:03
+-- Généré le :  jeu. 23 mai 2019 à 13:01
 -- Version du serveur :  5.7.26-0ubuntu0.18.04.1
 -- Version de PHP :  7.3.5-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -39,6 +39,13 @@ CREATE TABLE `articles` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `articles`
+--
+
+INSERT INTO `articles` (`id`, `users_id`, `title`, `content`, `url_img`, `alt_img`, `created_at`, `updated_at`) VALUES
+(1, 1, 'test', 'test', NULL, NULL, '2019-05-23 10:50:49', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -52,6 +59,13 @@ CREATE TABLE `comments` (
   `content` text NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `comments`
+--
+
+INSERT INTO `comments` (`id`, `articles_id`, `author`, `content`, `created_at`) VALUES
+(1, 1, 'Anonyme', 'test', '2019-05-23 13:01:21');
 
 -- --------------------------------------------------------
 
@@ -71,6 +85,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `login`, `password`, `url_avatar`, `file`) VALUES
+(1, 'Jarod', 'MIDY', 'jarod.midy@gmail.com', 'koinzell', 'admin', NULL, NULL);
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -85,7 +106,8 @@ ALTER TABLE `articles`
 -- Index pour la table `comments`
 --
 ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_articles_comments_articles_id` (`articles_id`);
 
 --
 -- Index pour la table `users`
@@ -101,19 +123,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Contraintes pour les tables déchargées
@@ -124,6 +146,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `articles`
   ADD CONSTRAINT `fk_users_articles` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
+
+--
+-- Contraintes pour la table `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `fk_articles_comments_articles_id` FOREIGN KEY (`articles_id`) REFERENCES `articles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
