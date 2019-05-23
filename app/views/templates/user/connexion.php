@@ -1,5 +1,4 @@
 <div class="panel-login">
-    
     <div class="zone">
         <h1>Espace de connexion</h1>
         <div class="login">
@@ -14,8 +13,7 @@
                 </div>
                 <button type="submit" class="btn btn-success form-control">Se connecter</button>
             </form>
-            <a class="register" href="#"><i class="fas fa-chevron-right"></i> S'inscrire</a>  
+            <a class="register" href="#"><i class="fas fa-chevron-right"></i> S'inscrire</a>
         </div>
     </div>
-
 </div>
