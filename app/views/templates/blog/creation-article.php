@@ -1,5 +1,3 @@
-<body>
-
     <h1>Création de l'article</h1>
     <div id="creationArticle" class="container">
         <div class="formInput form-group">
@@ -20,7 +18,5 @@
             <label for="texteArticle">Texte de votre article</label>
             <textarea placeholder="Entrez le texte de votre article ici ..." rows="10" name="texteArticle"></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Je valide mon article !</button>
+        <button type="submit" class="btn btn-success" name="validationArticle">Je valide mon article !</button>
     </div>
-
-</body>

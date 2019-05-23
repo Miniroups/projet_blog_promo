@@ -21,10 +21,10 @@ class BlogController extends Controller
   }
   // URL d'acces à utiliser : /Blog/edit/id
   // param : id de l'article à édit
-  protected function edit()
+  protected function edit($new)
   {
     $this->template = 'blog/creation-article';
-    if ($this->param) {
+    if (!$new) {
       $this->data = $this->model->getOneArticle($this->param);
     }
     // if (formulaire validé) {
@@ -35,7 +35,7 @@ class BlogController extends Controller
   // pas de paramètre
   protected function new()
   {
-      $this->edit(false);
+      $this->edit(true);
   }
   // URL d'acces à utiliser : /Blog/article/id
   // param : id de l'article à afficher
