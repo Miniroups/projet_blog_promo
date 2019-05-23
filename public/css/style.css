@@ -421,6 +421,7 @@ nav.navbar {
     display: flex;
     flex-grow: 2;
     flex-direction: column;
+    margin-top: 83px;
 }
 
 /* NOTE Yanek */
@@ -653,17 +654,52 @@ nav.navbar{
     margin-right: 0;
 }
 
-/* Fin de la page liste des articles */
-
 /* Page profil des utilisateurs */
-
 #avatar {
-    overflow:hidden;
-    border-radius:50%;
-    width:100px;
-    height:190px;
+    display: flex;
+    justify-content: center;
+}
+#avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
 }
 
 #infos {
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#infos .row .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+#infos main {
+    align-self: center;
+}
+
+#infos a.btn.btn-info {
+    width: 30%;
+    align-self: center;
+    margin: 1em auto;
+    background-color: #63af36;
+    border: 1px solid #407a1e;
+    border-radius: 2px;
+}
+
+#infos a.btn.btn-info:hover, #infos a.btn.btn-primary:hover {
+    background-color: #407a1e;
+    border: 1px solid #63af36;
+    cursor: pointer;
+}
+
+#infos a.btn.btn-primary {
+    margin: 1em 0 1em auto;
+    background-color: #63af36;
+    border: 1px solid #407a1e;
+    border-radius: 2px;
+    align-content: flex-end;
 }
