@@ -43,4 +43,11 @@ class HomeController extends Controller
     //   $this->model->($_POST);
     // }
   }
+
+  // URL d'acces à utiliser : /home/mentions
+  // aucun paramètre
+  protected function mentions()
+  {
+    $this->template = 'mentions';
+  }
 }
