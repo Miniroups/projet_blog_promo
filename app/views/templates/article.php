@@ -1,6 +1,3 @@
-<?php include_once('./include_head.php');?>
-<?php include_once('./include_header.php');?>
-
 <div class="content article-show">
 
     <!-- En tête de l'article -->
@@ -56,5 +53,3 @@
     </section>
 
 </div>
-
-<?php include_once('./include_footer.php');?>

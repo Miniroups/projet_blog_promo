@@ -1,5 +1,3 @@
-<?php include_once('./include_head.php');?>
-
 <div class="panel-login">
     
     <div class="zone">
