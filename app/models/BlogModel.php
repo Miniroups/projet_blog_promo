@@ -13,8 +13,9 @@ class BlogModel extends Model
     return $stm->fetchAll();
   }
 
-  public function getOneArticle(int $articleId) : array
+  public function getOneArticle($articleId) : array
   {
+    $articleId = intval($articleId);
     $stm = $this->getData('SELECT * FROM articles WHERE id = ?',[$articleId]);
     return $stm->fetch();
   }
@@ -23,8 +24,9 @@ class BlogModel extends Model
     $stm = $this->getData('SELECT * FROM articles ORDER BY id DESC LIMIT ?',[$limit]);
     return $stm->fetchAll();
   }
-  public function getComments(int $articleId) : array
+  public function getComments($articleId) : array
   {
+    $articleId = intval($articleId);
     $stm = $this->getData('SELECT * FROM comments WHERE articles_id = ?',[$articleId]);
     return $stm->fetchAll();
   }

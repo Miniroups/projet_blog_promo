@@ -14,7 +14,9 @@ class UserModel extends Model
 
   public function getOneUser($userId)
   {
-    return $this->getData('SELECT * FROM users WHERE id = ?',[$userId]);
+    $userId = intval($userId);
+    $stm = $this->getData('SELECT * FROM users WHERE id = ?',[$userId]);
+    return $stm->fetch();
   }
 
   public function addUser(array $userData)

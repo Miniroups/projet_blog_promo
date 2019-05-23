@@ -13,7 +13,7 @@ class HomeController extends Controller
   public function __construct($action, $param = '')
   {
     $this->model = new UserModel();
-    parent::__construct($action, $param = '');
+    parent::__construct($action, $param);
   }
   // URL d'acces à utiliser : / ou /home
   // aucun paramètre
@@ -30,11 +30,17 @@ class HomeController extends Controller
   protected function login()
   {
     $this->template = 'user/connexion';
+    // if (formulaire validé) {
+    //   $this->model->($_POST);
+    // }
   }
   // URL d'acces à utiliser : /home/register
   // aucun paramètre
   protected function register()
   {
     $this->template = 'user/inscription';
+    // if (formulaire validé) {
+    //   $this->model->($_POST);
+    // }
   }
 }

@@ -8,10 +8,10 @@ use app\models\BlogModel;
  */
 class BlogController extends Controller
 {
-  public function __construct($action, $param = '')
+  public function __construct($action, $param = [])
   {
     $this->model = new BlogModel();
-    parent::__construct($action, $param = '');
+    parent::__construct($action, $param);
   }
   // URL d'acces à utiliser : /Blog
   // liste les articles
@@ -21,11 +21,11 @@ class BlogController extends Controller
   }
   // URL d'acces à utiliser : /Blog/edit/id
   // param : id de l'article à édit
-  protected function edit($param)
+  protected function edit()
   {
     $this->template = 'blog/creation-article';
-    if ($param) {
-      $this->data = $this->model->getOneArticle($param);
+    if ($this->param) {
+      $this->data = $this->model->getOneArticle($this->param);
     }
     // if (formulaire validé) {
     //   $this->model->($_POST);
@@ -37,17 +37,17 @@ class BlogController extends Controller
   {
       $this->edit(false);
   }
-  // URL d'acces à utiliser : /Blog/article
+  // URL d'acces à utiliser : /Blog/article/id
   // param : id de l'article à afficher
-  protected function article($param)
+  protected function article()
   {
-    $this->comments();
     $this->template = 'blog/article';
-    $this->data['article'] = $this->model->getOneArticle($param);
+    $this->comments();
+    $this->data['article'] = $this->model->getOneArticle($this->param);
   }
   protected function comments()
   {
-    $this->data['comments'] = $this->model->getComments($param);
+    $this->data['comments'] = $this->model->getComments($this->param);
     // if (formulaire validé) {
     //   $this->model->($_POST);
     // }

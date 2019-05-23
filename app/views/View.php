@@ -56,12 +56,12 @@ class View
     *description : requière un fichier, lui envoi des données
     * et le renvoi sous forme de chaine de caractères
     */
-    private function createFile(string $file, array $data):string
+    private function createFile(string $filePath, array $data):string
     {
-        if (file_exists($file)) {
+        if (file_exists($filePath)) {
             extract($data);
             ob_start();
-            require $file;
+            require $filePath;
             return ob_get_clean();
         } else {
             throw new \Exception($file.' : '.EXCEPTION_NOT_FOUND);

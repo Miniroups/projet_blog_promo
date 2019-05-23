@@ -11,7 +11,7 @@ abstract class Controller
     protected $data = [];
     protected $model;
 
-    public function __construct($action, $param = '')
+    public function __construct($action, array $param = [])
     {
         // paramètre le template comme l'action par défaut
         $this->template = $action;
