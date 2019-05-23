@@ -590,12 +590,127 @@ nav.navbar{
 /*  NOTE Rodrigo */
 
 .content.article-show .head-article {
-    background-color: red;
-    padding: 50px;
+    height: 20rem;
+    text-align: center;
+    position: relative;
 }
 
+.content.article-show .head-article .background {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -5;
+    min-height: 0;
+}
+
+.content.article-show .head-article h1 {
+    padding: 1rem 3rem;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    display: inline-block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.content.article-show .head-article .meta {
+    background-color: rgba(0,0,0,0.2);
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+}
 .content.article-show section.article {
-    background-color: blue;
+    padding: 2rem 1rem;
+}
+.content.article-show section.article p {
+    font-size: 1.2em;
+}
+.content.article-show section.article article {
+    padding: 2rem;
+    font-size: 1.2em;
+}
+.content.article-show .new-comment {
+
+    background-color: #fff;
+    padding: 1rem; 
+    color: rgb(66, 66, 66);
+}
+.content.article-show .new-comment #content, #name {
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-top: 5px;
+}
+.content.article-show .new-comment .comment-submit {
+    margin-top: 15px;
+}
+.content.article-show .show-comments {
+    padding: 1rem;
+    background-color: #ededed;
+    margin: 1rem 0;
+    color: rgb(66, 66, 66);
+
+}
+
+.content.article-show .show-comments article {
+    padding: 1rem;
+    font-size: 1.2em;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    margin: 1rem 0;
+}
+.content.article-show .show-comments article h4 small {
+    font-size: 0.8em; 
+}
+.content.article-show .show-comments article p {
+    padding: 1rem;
+}
+
+.panel-login {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.panel-login .zone {
+    display: table-cell;
+    vertical-align: middle;
+}
+.panel-login .zone h1 {
+    text-align:center;
+    padding: 20px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.panel-login .zone .login {
+    width: 500px;
+    background-color: #fff;
+    padding: 3rem 2rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgb(82, 82, 82);
+}
+.panel-login .zone .login form {
+    margin-bottom: 10px;
+}
+.panel-login .zone .login input {
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.panel-login .zone .login label {
+    margin-bottom: 5px;
+}
+.panel-login .zone .login label svg {
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 2px;
 }
 
 /* NOTE David */
@@ -654,41 +769,52 @@ nav.navbar{
     margin-right: 0;
 }
 
-/* Fin de la page liste des articles */
-
 /* Page profil des utilisateurs */
-
 #avatar {
-    overflow:hidden;
-    border-radius:50%;
-    width:100px;
-    height:190px;
+    display: flex;
+    justify-content: center;
+}
+#avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
 }
 
 #infos {
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Fin page profil des utilisateurs */
+#infos .row .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-/* Page contact */
-
-#contact {
-    
 }
 
-#contact-bloc {
-    height:200px;
-    position: sticky;
-    top: 83px;
+#infos main {
+    align-self: center;
 }
 
-#map {
-    width: 100%;
-    height: 350px;
-    border: 1px solid black;
-    margin-top: 10px;
-    margin-bottom: 10px;
+#infos a.btn.btn-info {
+    width: 30%;
+    align-self: center;
+    margin: 1em auto;
+    background-color: #63af36;
+    border: 1px solid #407a1e;
+    border-radius: 2px;
 }
 
-/* Fin page contact */
+#infos a.btn.btn-info:hover, #infos a.btn.btn-primary:hover {
+    background-color: #407a1e;
+    border: 1px solid #63af36;
+    cursor: pointer;
+}
+
+#infos a.btn.btn-primary {
+    margin: 1em 0 1em auto;
+    background-color: #63af36;
+    border: 1px solid #407a1e;
+    border-radius: 2px;
+    align-content: flex-end;
+}

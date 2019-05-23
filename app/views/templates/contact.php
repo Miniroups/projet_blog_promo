@@ -1,4 +1,14 @@
-    <section id="contact" class="container-fluid content">
+  <!doctype html>
+  <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <title>Formulaire de contact</title>
+      <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </head>
+
+    <body style="padding:40px">
+
       <div class="row">
         <div class="col-md-8 col-sm-12"><!-- FORM COL -->
           <div class="container">
@@ -6,10 +16,10 @@
               <h1>Formulaire de contact</h1>
             </div>
           </div>
-
           <!-- CONTENT -->
           <div class="container">            
             <form action="send_form.php" method="post">
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -66,7 +76,7 @@
           <!-- END CONTENT -->
         </div><!-- END FORM COL -->  
 
-        <div id="contact-bloc" class="col-md-4 col-sm-12">
+        <div id="contact-bloc" class="col-md-4 col-sm-12 sticky-top" style="height: 200px">
           <h3>Coordonnées</h3>
           <h5>Corrèze digital School</h5>
           <p>22 Avenue du Dr Albert Schweitzer, 19000 Tulle</p>
@@ -75,7 +85,11 @@
         </div>
       </div><br><!-- END GLOBAL ROW -->
 
-      <iframe id="map" src="https://www.openstreetmap.org/export/embed.html?bbox=1.7577266693115237%2C45.25760952610949%2C1.8234729766845705%2C45.29378835869491&amp;layer=mapnik&amp;marker=45.27570182561101%2C1.7905998229980469"></iframe>
-    </section>
-
-  
+      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=1.7577266693115237%2C45.25760952610949%2C1.8234729766845705%2C45.29378835869491&amp;layer=mapnik&amp;marker=45.27570182561101%2C1.7905998229980469" style="border: 1px solid black"></iframe>
+        
+  </html>
+  <?php
+  unset($_SESSION['inputs']); // on nettoie les données précédentes
+  unset($_SESSION['success']);
+  unset($_SESSION['errors']);
+  ?>
