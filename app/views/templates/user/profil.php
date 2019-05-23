@@ -9,11 +9,9 @@
                     </div>
                     <h3>Email : adresse.gmail.com</h3><br>
                     <a href="#">Modifier mes informations</a>
-                </div>    
+                </div>
             </div><br>
             <h3>Mes articles :</h3><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus assumenda, aliquam distinctio architecto saepe deserunt. Sequi, quaerat totam minus veniam dolores assumenda tempora ipsa doloremque ullam eum repellendus tenetur! Sit?</p><br>
             <button type="button" class="btn btn-light">Charger plus d'articles</button>
-        </section>
-    </body>
-</html>    
+        </section>  

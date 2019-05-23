@@ -4,12 +4,12 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title> <?= $this->title = isset($this->title) ? $this->title : 'Blog Promo'  ?> </title>
 
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
 
 
-<script src="assets/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/fontawesome/js/all.min.js"></script>
-<script src="js/script.js"></script>
+<script src="../assets/jquery.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/fontawesome/js/all.min.js"></script>
+<script src="../js/script.js"></script>
