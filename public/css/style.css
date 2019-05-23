@@ -405,9 +405,16 @@ body {
     justify-content: space-between;
 }
 
+.navbar{
+    position: fixed;
+    z-index: 100;
+    opacity: 1;
+}
+
 nav.navbar {
     /* position: fixed; */
     width: 100vw;
+    /* max-height: 3rem; */
 }
 
 .content {
@@ -421,7 +428,7 @@ nav.navbar {
 nav.navbar{
     /* padding-left: 0;
     padding-right: 0; */
-    width: unset;
+    /* width: unset; */
 }
 
 .nopadding{
@@ -451,6 +458,10 @@ nav.navbar{
 
 .indent{
     margin-bottom: 1rem;
+}
+
+.indent2{
+    margin-bottom: 2rem;
 }
 
 .video iframe {
@@ -513,6 +524,64 @@ nav.navbar{
 .stretch{
     display: flex;
     align-items: stretch;
+}
+
+/*-------------------------------*/
+
+.navbar-brand.large{
+    display: flex;
+    flex-direction: column;
+    transition-property: flex-direction;
+    transition-duration: 0.5s;
+
+}
+
+.navbar-brand.large .tree{
+    width: 4rem;
+    margin-bottom: 0.5rem;
+    transition-property: width, height, margin-right;
+    transition-duration: 0.5s;
+}
+
+.navbar-brand.large .text{
+    width: 4rem;
+    /* height: 0.88rem; */
+    transition-property: width, height, margin-top;
+    transition-duration: 0.5s;
+}
+
+/*-------------------*/
+
+.navbar-brand.small{
+    display: flex;
+    flex-direction: row;
+    transition-property: flex-direction;
+    transition-duration: 0.5s;
+
+}
+
+.navbar-brand.small .tree{
+    width: 3.2rem;
+    height: 2.3rem;
+    margin-right: 0.5rem;
+    transition-property: width, height, margin-right;
+    transition-duration: 0.5s;
+    margin-bottom: 0.5rem;
+   
+}
+
+.navbar-brand.small .text{
+    width: 7.71rem;
+    height: 1.7rem;
+    margin-top:0.7rem;
+
+    transition-property: width, height, margin-top;
+    transition-duration: 0.5s;
+   
+}
+
+.nav-item{
+    font-size: 1.2rem;
 }
 
 

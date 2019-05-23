@@ -55,7 +55,7 @@
 
 
             </div>
-            <div class="row indent">
+            <div class="row indent2">
                 <div class="col-md-12 flex-center">
                     <button type="button" class="btn btn-primary">Charger plus</button>
                 </div>

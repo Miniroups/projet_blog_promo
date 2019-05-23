@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-    <a class="navbar-brand" href="#">FUTUR LOGO</a>
+    <a class="navbar-brand large" href="#"><img class='tree' src="../img/logo_tree.png"><img class="text" src="../img/logo_text.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,7 +11,10 @@
             <a class="nav-link" href="#">Accueil</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="#">Articles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
         </li>
         </ul>
         <ul class="navbar-nav">
