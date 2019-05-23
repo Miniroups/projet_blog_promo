@@ -20,7 +20,7 @@ class BlogController extends Controller
   }
   // URL d'acces à utiliser : /Blog/new
   // pas de paramètre
-  protected function new($value='')
+  protected function new()
   {
       $this->edit('');
   }

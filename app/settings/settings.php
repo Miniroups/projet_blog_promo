@@ -4,8 +4,6 @@ require_once "config.php";
 
 // racine des fichier pour l'autoload
 define('DIR_ROOT', '../app/');
-// nom du templates d'acceuil
-define('HOMEPAGE','home');
 // salt pour les mot de passe
 define('SALT','#£$@tr0c#$£è');
 // messages erreurs

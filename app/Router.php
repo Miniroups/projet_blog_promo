@@ -7,14 +7,14 @@ class Router {
 
     public function __construct($url) {
         if ($url === '/') {
-            $index = new HomeController(HOMEPAGE,'');
+          header('Location: home/');
         } else {
             // nom du controller
-            $requestedController  = ucfirst($url[0]);
+            $requestedController = ucfirst($url[0]);
             // action à effectuer
-            $requestedAction      = isset($url[1]) ? $url[1] : '';
+            $requestedAction = isset($url[1]) ? $url[1] : '';
             // paramètres de l'action
-            $requestedParams       = array_slice($url, 2);
+            $requestedParams = array_slice($url, 2);
             // chemin du controller
             $ctrlPath = DIR_ROOT.'controllers/'.$requestedController.'Controller.php';
             if (file_exists($ctrlPath)) {

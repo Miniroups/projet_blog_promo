@@ -1,5 +1,4 @@
-<body>
-    <section id="mainArticle" class="container">
+  <section id="mainArticle" class="container">
         <div class="row">
             <div class="col-5">
                 <a href="#">
@@ -53,4 +52,3 @@
             <a href="#" class="btn btn-info">Voir plus d'articles</a>
         </div>
     </section>
-</body>
