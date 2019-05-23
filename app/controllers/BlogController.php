@@ -28,7 +28,7 @@ class BlogController extends Controller
       $this->data = $this->model->getOneArticle($param);
     }
     // if (formulaire validé) {
-    //   $this->model->addArticle($_POST);
+    //   $this->model->($_POST);
     // }
   }
   // URL d'acces à utiliser : /Blog/new
@@ -49,7 +49,7 @@ class BlogController extends Controller
   {
     $this->data['comments'] = $this->model->getComments($param);
     // if (formulaire validé) {
-    //   $this->model->addComment($_POST);
+    //   $this->model->($_POST);
     // }
   }
 }

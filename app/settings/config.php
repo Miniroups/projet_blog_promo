@@ -8,8 +8,8 @@ define("HOST", 'localhost');
 // Nom de la base
 define("DB", 'blog_promo');
 // Nom d'utilisateur
-define("USER", 'adminphp');
+define("USER", '');
 // Mot de passe
-define("PWD", '1997Ubellblatt');
+define("PWD", '');
 // Encodage
 define("CHARSET", 'utf8');
