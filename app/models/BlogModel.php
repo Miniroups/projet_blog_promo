@@ -33,12 +33,13 @@ class BlogModel extends Model
 
   public function addArticle(array $articleData)
   {
+    var_dump('nop');
     // code...
   }
 
   public function updateArticle(array $articleData)
   {
-    // code...
+    var_dump('hello');
   }
 
   public function addComment(array $commentData)

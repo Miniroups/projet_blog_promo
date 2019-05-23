@@ -22,7 +22,7 @@ abstract class Controller
           $action = 'index';
         }
         // instancie la méthode lier à l'action
-        $this->$action($param);
+        $this->$action();
         // instancie la vue
         $this->view = new View($this->template, $this->data);
     }
