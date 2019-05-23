@@ -71,7 +71,7 @@
           <h5>Corrèze digital School</h5>
           <p>22 Avenue du Dr Albert Schweitzer, 19000 Tulle</p>
           <p>Téléphone : 06.89.27.59.75</p>
-          <p><a class="fab fa-facebook-f" href="https://www.facebook.com/CorrtechTerritoireNumerique/" target="_blank"></a> <a class="fab fa-twitter" href="https://twitter.com/corrtech?lang=fr" target="_blank"></a> <a class="fab fa-linkedin-in" href="https://www.linkedin.com/company/corrtech/" target="_blank"></a></p>
+          <p><a href="https://www.facebook.com/CorrtechTerritoireNumerique/" target="_blank"><i class="fab fa-facebook-f"></i></a> <a href="https://twitter.com/corrtech?lang=fr" target="_blank"><i class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/company/corrtech/" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
         </div>
       </div><br><!-- END GLOBAL ROW -->
 
