@@ -840,3 +840,26 @@ nav.navbar{
 }
 
 /* Fin page contact */
+
+/* Page inscription */
+#inscription .formInput {
+    display: flex;
+    flex-direction: column;
+}
+
+#inscription .formInput:last-child {
+    align-self: self-end;
+}
+
+/* Page creation-article */
+#inscription button {
+    float: right;
+    background-color: #63af36;
+    border: 1px solid #407a1e;
+    border-radius: 2px;  
+}
+
+#inscription button:hover {
+    background-color: #407a1e;
+    border: 1px solid #63af36;
+}
