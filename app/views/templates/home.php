@@ -22,7 +22,7 @@
 
             <div class="card-body">
               <h2 class="card-title"><a href="#"><?= $articles[$i]["title"] ?></a></h2>
-              <p class="card-text"><?= $articles[$i]["content"] ?></p>
+              <p class="card-text"><?= substr($articles[$i]["content"], 0, 200)  ?></p>
             </div>
           </div>
         </div>
