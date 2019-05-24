@@ -1,5 +1,4 @@
 <div class="content article-show">
-
     <!-- En tête de l'article -->
     <div class="container-fluid head-article">
         <img class="background" src="http://placehold.it/1980x1180" alt="Image de l'article">

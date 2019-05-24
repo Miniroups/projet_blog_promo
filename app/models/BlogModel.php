@@ -16,7 +16,7 @@ class BlogModel extends Model
   public function getOneArticle($articleId) : array
   {
     $articleId = intval($articleId);
-    $stm = $this->getData('SELECT * FROM articles WHERE id = ?',[$articleId]);
+    $stm = $this->getData('SELECT articles.content, articles.created_at, articles.url_img, articles.alt_img, articles.title, users.login FROM articles INNER JOIN users ON articles.users_id = users.id',[$articleId]);
     return $stm->fetch();
   }
   public function getArticles(int $limit)
