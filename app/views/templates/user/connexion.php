@@ -13,7 +13,7 @@
                 </div>
                 <button type="submit" class="btn btn-success form-control" name="validationConnexion">Se connecter</button>
             </form>
-            <a class="register" href="<?= $publicPath?>/home/register"><i class="fas fa-chevron-right"></i> S'inscrire</a>
+            <a class="register" href="<?= PUBLIC_PATH?>/home/register"><i class="fas fa-chevron-right"></i> S'inscrire</a>
         </div>
     </div>
 </div>

@@ -30,7 +30,7 @@ class HomeController extends Controller
   protected function login()
   {
     if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == true) {
-      header('Location: '.PUBLIC_PATH.'user/profil/'.$_SESSION['userInfos']['id']);
+      header('Location: '.PUBLIC_PATH.'/user/profil/'.$_SESSION['userInfos']['id']);
     } else {
       $this->template = 'user/connexion';
       if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['validationConnexion'])) {
@@ -48,7 +48,6 @@ class HomeController extends Controller
         $_POST['password'] = Encrypt::md5($_POST['password']);
         unset($_POST['confirmPassword']);
         unset($_POST['submitInscription']);
-        var_dump($_POST);
         $this->model->addUser($_POST);
       } else {
         $this->data['error'] = 'les mots de passes ne correspondent pas.';
