@@ -414,6 +414,11 @@ body {
     flex-direction: column;
     /* align-items: self-end; */
     justify-content: space-between;
+    height: 100% !important;
+}
+
+html {
+    height: 100% !important;
 }
 
 .navbar{
