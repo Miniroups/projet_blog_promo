@@ -3,7 +3,7 @@
     <div class="container-fluid head-article">
         <img class="background" src="http://placehold.it/1980x1180" alt="Image de l'article">
         <h1>Titre de mon Article</h1>
-        <div class="meta"><?= $article['created_at'] ?> par <b>Monnier</b>.</div>
+        <div class="meta"><?= $article['created_at'] ?> par <b><?= $article['login'] ?></b>.</div>
     </div>
 
     <!-- Body de l'article -->
