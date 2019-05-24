@@ -35,7 +35,7 @@ class UserController extends Controller
         unset($_POST['password']);
       }
       unset($_POST['submitInscription']);
-      $this->model->addUser($_POST);
+      $this->model->updateUser($_POST);
     }
   }
 }
