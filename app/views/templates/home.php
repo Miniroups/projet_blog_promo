@@ -52,11 +52,10 @@
           <?php for ($j = 0; $j < count($users); $j++) { ?>
           <div class="col-md-4">
             <div class="card text-white bg-secondary mb-3 team">
-              <a href="#"><img src="<?= $users[$j]["url_avatar"] ?>" class="card-img-top"
-                  alt="Photo de <?= $users[$j]["url_avatar"] ?>"></a>
-
+              <a href="#"><img src="<?= $avatar = !empty($users[$j]["url_avatar"]) ? $users[$j]["url_avatar"] : 'https://lorempixel.com/500/500/abstract/?12345' ?>" class="img-circle card-img-top"
+                  alt="Photo de profil"></a>
               <div class="card-body">
-                <h2 class="card-title"><a href="#"><?= $users[$j]["firstname"] . $users[$j]["lastname"] ?></a></h2>
+                <h2 class="card-title"><a href="<?= PUBLIC_PATH.'/user/profil/'.$users[$j]['id'] ?>"><?= $users[$j]["firstname"] . $users[$j]["lastname"] ?></a></h2>
                 <p class="card-text"><?= $users[$j]["firstname"] ?></p>
               </div>
             </div>
