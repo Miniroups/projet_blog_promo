@@ -55,7 +55,7 @@
 
                 <div class="col-md-12">
                   <input type="checkbox" name="rgpd">
-                  <label for="rgpd"><a href="<?= $publicPath?>/home/mentions">En cochant cette case, vous reconnaissez avoir consulté et accepté les conditions générales d'utilisation du site*</a></label>
+                  <label for="rgpd"><a href="home/mentions">En cochant cette case, vous reconnaissez avoir consulté et accepté les conditions générales d'utilisation du site*</a></label>
                 </div>
                 <div class="col-md-12">
                   <button type='submit' class='btn btn-primary'>Envoyer</button>

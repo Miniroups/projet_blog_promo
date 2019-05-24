@@ -35,7 +35,6 @@ class BlogController extends Controller
         array_push($_POST, ['id'=>$this->param]);
         $this->model->updateArticle($_POST);
       }
-
     }
   }
   // URL d'acces à utiliser : /Blog/new

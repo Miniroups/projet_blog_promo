@@ -1,6 +1,4 @@
 <div class="content"> 
-
-
     <div class="container">
         <h1>CGU, politique de confidentialité</h1>
         <h2>À propos de CorrDev</h2>

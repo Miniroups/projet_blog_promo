@@ -2,6 +2,8 @@
 use app\autoload;
 use app\Router;
 
+session_start();
+// session_destroy();
 require '../app/Autoload.php';
 
 Autoload::register();

@@ -13,48 +13,25 @@
         </div>
       </div>
       <div class="row stretch indent">
+        <?php for ($i = 1; $i <= 3; $i++) { ?>
         <div class="col-md-4 stretch">
           <div class="card text-white bg-secondary mb-3">
-            <a href="#"><img src="https://www.flipgive.com/assets/flipgive/home_new/home-team-bbd671fd63cc16364913652728ac382667846e6fc6b2195835215ca3bfe957e5.png" class="card-img-top" alt="..."></a>
+            <a href="#"><img src="<?= $articles[0]["url_img"] ?>" class="card-img-top" alt="<?= $articles[0]["alt_img"] ?>"></a>
 
             <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h2 class="card-title"><a href="#"><?= $articles[0]["title"] ?></a></h2>
+              <p class="card-text"><?= $articles[0]["content"] ?></p>
             </div>
           </div>
-
         </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-
-        </div>
-
-
-
+        <?php } ?>
       </div>
+
       <div class="row indent">
         <div class="col-md-12 flex-center">
-          <button type="button" class="btn btn-primary">Charger plus</button>
+          <a href="<?= $publicPath?>/blog">
+            <button type="button" class="btn btn-primary">Charger plus</button>
+          </a>
         </div>
       </div>
 
@@ -65,104 +42,18 @@
       </div>
 
       <div class="row indent">
+      <?php for ($j = 1; $j <= 9; $j++) { ?>
         <div class="col-md-4">
           <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
+            <a href="#"><img src="<?= $users[0]["url_avatar"] ?>" class="card-img-top" alt="Photo de <?= $users[0]["url_avatar"] ?>"></a>
 
             <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h2 class="card-title"><a href="#"><?= $users[0]["firstname"] . $users[0]["lastname"] ?></a></h2>
+              <p class="card-text"><?= $users[0]["firstname"] ?></p>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="https://via.placeholder.com/150" class="card-img-top" alt="..."></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#">Secondary card title</a></h2>
-              <p class="card-text">Some </p>
-            </div>
-          </div>
-        </div>
+      <?php } ?>
       </div>
 
 

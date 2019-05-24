@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use app\models\BlogModel;
 use app\models\UserModel;
-
+use app\vendor\Encrypt;
 /**
  *
  */
@@ -29,10 +29,14 @@ class HomeController extends Controller
   // aucun paramètre
   protected function login()
   {
-    $this->template = 'user/connexion';
-    // if (formulaire validé) {
-    //   $this->model->($_POST);
-    // }
+    if (isset($_SESSION['connexion']) && $_SESSION['connexion'] == true) {
+      header('Location: '.PUBLIC_PATH.'user/profil/'.$_SESSION['userInfos']['id']);
+    } else {
+      $this->template = 'user/connexion';
+      if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['validationConnexion'])) {
+        $this->testLogin($_POST);
+      }
+    }
   }
   // URL d'acces à utiliser : /home/register
   // aucun paramètre
@@ -49,5 +53,22 @@ class HomeController extends Controller
   protected function mentions()
   {
     $this->template = 'mentions';
+  }
+  private function testLogin($data){
+    $users = $this->model->getAllUsers();
+    for ($i=0; $i < count($users) ; $i++) {
+      if (($users[$i]['login'] === $data['loginConnexion']) ||($users[$i]['email'] === $data['loginConnexion'])) {
+        if ($users[$i]['password'] === Encrypt::md5($data['passwordConnexion'])) {
+          $_SESSION['connexion'] = true;
+          $_SESSION['userInfos'] = ['id' => $users[$i]['id']];
+          header('Location: '.PUBLIC_PATH.'/home',true);
+        } else {
+          $this->data['errors'] = 'Identifiants invalide';
+        }
+      } else {
+        $this->data['errors'] = 'Identifiants invalide';
+      }
+    }
+
   }
 }
