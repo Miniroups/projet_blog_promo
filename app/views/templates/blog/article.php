@@ -1,15 +1,15 @@
 <div class="content article-show">
     <!-- En tête de l'article -->
     <div class="container-fluid head-article">
-        <img class="background" src="http://placehold.it/1980x1180" alt="Image de l'article">
-        <h1>Titre de mon Article</h1>
+        <img class="background" src="<?= PUBLIC_PATH.'/'.$article['url_img'] ?>" alt="Image de l'article">
+        <h1> <?= $article['title'] ?></h1>
         <div class="meta"><?= $article['created_at'] ?> par <b><?= $article['login'] ?></b>.</div>
     </div>
 
     <!-- Body de l'article -->
     <section class="container article">
         <article>
-            <p><?= $article['content'] ?></p>
+            <pre><?= $article['content'] ?></pre>
         </article>
     </section>
 
@@ -39,7 +39,7 @@
                     <h4><i class="fas fa-user"></i> <?= $comment['author'] ?> <small> (<?= $comment['created_at'] ?>)</small></h4>
                     <p><?= $comment['content'] ?></p>
                 </article>
-            <? } ?>
+            <?php } ?>
 
             <button class="btn btn-success form-control">Voir plus de commentaires...</button>
         </div>
