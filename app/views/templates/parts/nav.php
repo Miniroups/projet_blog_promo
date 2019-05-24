@@ -18,12 +18,19 @@
         </li>
         </ul>
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="<?= $publicPath?>/home/login"><i class="fas fa-user"></i> Connexion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= $publicPath?>/home/register"><i class="fas fa-sign-in-alt"></i> Inscription</a>
-            </li>
+            <?php if($_SESSION['connexion']) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $publicPath?>/user/profil/<?= $_SESSION['userInfos']['id'] ?>"><i class="fas fa-user"></i> Mon profil</a>
+                </li>
+            <?php } else { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $publicPath?>/home/login"><i class="fas fa-user"></i> Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $publicPath?>/home/register"><i class="fas fa-sign-in-alt"></i> Inscription</a>
+                </li>
+            <?php } ?>
+
         </ul>
     </div>
     </div>
