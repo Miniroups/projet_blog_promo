@@ -1,5 +1,5 @@
 <div class="content">
-    <h1>Inscription / Edition de votre profil</h1>
+    <h1 style="text-align: center" class="m-5">Inscription / Edition de votre profil</h1>
 
     <section id="inscription" class="container">
         <form method="post">
