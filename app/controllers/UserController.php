@@ -23,9 +23,19 @@ class UserController extends Controller
   public function edit()
   {
     $this->template = 'user/inscription';
-    $this->data = $this->model->getOneUser($this->param);
-    // if (formulaire validé) {
-    //   $this->model->($_POST);
-    // }
+    $this->data = $this->model->getOneUser($_SESSION['userInfos']['id']);
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitInscription'])) {
+      if ($_POST['password'] === $_POST['confirmPassword']) {
+        $_POST['password'] = Encrypt::md5($_POST['password']);
+        unset($_POST['confirmPassword']);
+      } else {
+        $this->data['error'] = 'les mots de passes ne correspondent pas.';
+      }
+      if (empty($_POST['password'])) {
+        unset($_POST['password']);
+      }
+      unset($_POST['submitInscription']);
+      $this->model->addUser($_POST);
+    }
   }
 }

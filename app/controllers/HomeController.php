@@ -44,7 +44,7 @@ class HomeController extends Controller
   {
     $this->template = 'user/inscription';
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitInscription'])) {
-      if ($_POST['password'] === $_POST['confirmPassword']) {
+      if (($_POST['password'] === $_POST['confirmPassword']) && (!empty($_POST['password']))) {
         $_POST['password'] = Encrypt::md5($_POST['password']);
         unset($_POST['confirmPassword']);
         unset($_POST['submitInscription']);
