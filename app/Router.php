@@ -7,7 +7,7 @@ class Router {
 
     public function __construct($url) {
         if ($url === '/') {
-          header('Location: home/');
+          $index = new HomeController('home',[]);
         } else {
             // nom du controller
             $requestedController = ucfirst($url[0]);
