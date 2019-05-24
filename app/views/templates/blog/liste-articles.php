@@ -1,54 +1,32 @@
-  <section id="mainArticle" class="container">
-        <div class="row">
-            <div class="col-5">
-                <a href="#">
-                    <img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?12345" alt="Photo principal article">
-                </a>
-            </div>
-            <div class="col">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="allArticle" class="container">
-        <div class="row">
-            <div class="col">
-                <a href="#"><img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?23252" alt="Photo principal article"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-            <div class="col">
-                <a href="#"><img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?23568" alt="Photo principal article"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-            <div class="col">
-                <a href="#"><img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?46871" alt="Photo principal article"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <a href="#"><img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?14482" alt="Photo principal article"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-            <div class="col">
-                <a href="#"><img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?47924" alt="Photo principal article"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-            <div class="col">
-                <a href="#"><img class="img-fluid" src="https://lorempixel.com/640/480/abstract/?17273" alt="Photo principal article"></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi illo laboriosam sit tempore a, dolore alias ratione magni distinctio rem praesentium iure voluptatibus provident! Molestias iusto laudantium molestiae impedit vel natus, incidunt explicabo placeat perspiciatis quo quae eaque maiores nemo.</p>
-                <a href="#" class="btn btn-info">Lire l'article !</a>
-            </div>
-        </div>
-
-        <div class="row button-center">
-            <a href="#" class="btn btn-info">Voir plus d'articles</a>
-        </div>
-    </section>
+<div class="content">
+    <section id="mainArticle" class="container">
+          <div class="row">
+              <div class="col-5">
+                  <a href="#">
+                      <img class="img-fluid" src="<?= $article[0]["url_img"] ?>" alt="<?= $article[0]["alt_img"] ?>">
+                  </a>
+              </div>
+              <div class="col">
+                  <h2><?= $article[0]["title"] ?></h2>
+                  <p><?= $article[0]["content"] ?></p>
+                  <a href="#" class="btn btn-info">Lire l'article !</a>
+              </div>
+          </div>
+      </section>
+  
+      <section id="allArticle" class="container">
+          <div class="row">
+              <? for($i = 0; $i < count($article); $i++) { ?>
+              <div class="col">
+                  <a href="#"><img class="img-fluid" src="<?= $article[$i]["url_img"] ?>" alt="<?= $article[$i]["alt_img"] ?>"></a>
+                  <p><?= $article[$i]["content"] ?></p>
+                  <a href="#" class="btn btn-info">Lire l'article !</a>
+              </div>
+              <?php } ?>
+          </div>
+  
+          <div class="row button-center">
+              <a href="#" class="btn btn-info">Voir plus d'articles</a>
+          </div>
+      </section>
+</div>
