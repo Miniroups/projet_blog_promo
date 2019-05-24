@@ -2,7 +2,8 @@
 
   <div class='container-fluid nopadding'>
     <div class="row video indent">
-      <iframe src="https://www.youtube.com/embed/b4u3t9gUrmQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/LE6iX_QQ_js" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
 
@@ -13,14 +14,15 @@
         </div>
       </div>
       <div class="row stretch indent">
-        <?php for ($i = 1; $i <= 3; $i++) { ?>
+        <?php for ($i = 0; $i < 3; $i++) { ?>
         <div class="col-md-4 stretch">
           <div class="card text-white bg-secondary mb-3">
-            <a href="#"><img src="<?= $articles[0]["url_img"] ?>" class="card-img-top" alt="<?= $articles[0]["alt_img"] ?>"></a>
+            <a href="#"><img src="<?= $articles[$i]["url_img"] ?>" class="card-img-top"
+                alt="<?= $articles[$i]["alt_img"] ?>"></a>
 
             <div class="card-body">
-              <h2 class="card-title"><a href="#"><?= $articles[0]["title"] ?></a></h2>
-              <p class="card-text"><?= $articles[0]["content"] ?></p>
+              <h2 class="card-title"><a href="#"><?= $articles[$i]["title"] ?></a></h2>
+              <p class="card-text"><?= substr($articles[$i]["content"], 0, 200)  ?> ...</p>
             </div>
           </div>
         </div>
@@ -29,39 +31,44 @@
 
       <div class="row indent">
         <div class="col-md-12 flex-center">
-          <a href="<?= $publicPath?>/blog">
-            <button type="button" class="btn btn-primary">Charger plus</button>
+          <a href="<?= PUBLIC_PATH?>/blog">
+            <button type="button" class="btn btn-primary">Blog</button>
           </a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="row indent">
-        <div class="col-md-12 flex-center">
-          <h1><i class="fas fa-users"></i> Equipe</h1>
-        </div>
-      </div>
-
-      <div class="row indent">
-      <?php for ($j = 1; $j <= 9; $j++) { ?>
-        <div class="col-md-4">
-          <div class="card text-white bg-secondary mb-3 team">
-            <a href="#"><img src="<?= $users[0]["url_avatar"] ?>" class="card-img-top" alt="Photo de <?= $users[0]["url_avatar"] ?>"></a>
-
-            <div class="card-body">
-              <h2 class="card-title"><a href="#"><?= $users[0]["firstname"] . $users[0]["lastname"] ?></a></h2>
-              <p class="card-text"><?= $users[0]["firstname"] ?></p>
-            </div>
+  <div class="container-fluid parallax">
+    <div class="dark">
+      <div class="container">
+        <div class="row indent">
+          <div class="col-md-12 flex-center">
+            <h1><i class="fas fa-users"></i> Equipe</h1>
           </div>
         </div>
-      <?php } ?>
+
+        <div class="row indent">
+          <?php for ($j = 0; $j < count($users); $j++) { ?>
+          <div class="col-md-4">
+            <div class="card text-white bg-secondary mb-3 team">
+              <a href="#"><img src="<?= $users[$j]["url_avatar"] ?>" class="card-img-top"
+                  alt="Photo de <?= $users[$j]["url_avatar"] ?>"></a>
+
+              <div class="card-body">
+                <h2 class="card-title"><a href="#"><?= $users[$j]["firstname"] . $users[$j]["lastname"] ?></a></h2>
+                <p class="card-text"><?= $users[$j]["firstname"] ?></p>
+              </div>
+            </div>
+          </div>
+          <?php } ?>
+        </div>
       </div>
-
-
     </div>
-
-
-
   </div>
+
+
+</div>
 
 
 </div>

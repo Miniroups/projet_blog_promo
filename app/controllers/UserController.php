@@ -16,7 +16,7 @@ class UserController extends Controller
   // param : id de l'utilisateur
   protected function index() {
     $this->template = 'user/profil';
-    $this->data = $this->model->getOneUser($this->param);
+    $this->data = $this->model->getOneUser($this->param[0]);
   }
   // URL d'acces à utiliser : /user/edit
   // param : id de l'utilisateur
