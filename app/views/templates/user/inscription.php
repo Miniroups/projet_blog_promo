@@ -35,6 +35,16 @@
             </div>
             <div class="row">
                 <div class="col formInput form-group">
+                    <label for="cvUpload">CV</label>
+                    <input type="file" placeholder="Votre CV ..." name="cvUpload">
+                </div>
+                <div class="col formInput form-group">
+                    <label for="description">Description</label>
+                    <textarea id="inputDescription" name="description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col formInput form-group">
                     <label for="imageProfil">Image de profil</label>
                     <input type="text" placeholder="L'image de votre profil ..." name="imageProfil">
                 </div>
