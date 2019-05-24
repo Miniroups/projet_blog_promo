@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 23 mai 2019 à 13:01
+-- Généré le :  ven. 24 mai 2019 à 11:15
 -- Version du serveur :  5.7.26-0ubuntu0.18.04.1
 -- Version de PHP :  7.3.5-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `articles`
 --
 
+DROP TABLE IF EXISTS `articles`;
 CREATE TABLE `articles` (
   `id` int(11) NOT NULL,
   `users_id` int(11) NOT NULL,
@@ -52,6 +53,7 @@ INSERT INTO `articles` (`id`, `users_id`, `title`, `content`, `url_img`, `alt_im
 -- Structure de la table `comments`
 --
 
+DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `articles_id` int(11) NOT NULL,
@@ -73,6 +75,7 @@ INSERT INTO `comments` (`id`, `articles_id`, `author`, `content`, `created_at`) 
 -- Structure de la table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) NOT NULL,
@@ -81,15 +84,16 @@ CREATE TABLE `users` (
   `login` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `url_avatar` varchar(255) DEFAULT NULL,
-  `file` blob
+  `file` blob,
+  `about` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `login`, `password`, `url_avatar`, `file`) VALUES
-(1, 'Jarod', 'MIDY', 'jarod.midy@gmail.com', 'koinzell', 'admin', NULL, NULL);
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `login`, `password`, `url_avatar`, `file`, `about`) VALUES
+(1, 'Jarod', 'MIDY', 'jarod.midy@gmail.com', 'koinzell', 'd5926a02f8e972eb0405f90320dbdc65', NULL, NULL, NULL);
 
 --
 -- Index pour les tables déchargées
