@@ -44,7 +44,7 @@ class BlogModel extends Model
 
   public function addComment(array $commentData)
   {
-    // code...
+    $this->getData('INSERT INTO comments (id, articles_id, author, content, created_at) VALUES (NULL, :article_id, :author, :content, CURRENT_TIMESTAMP)',$commentData);
   }
 
 }

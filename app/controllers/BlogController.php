@@ -54,8 +54,11 @@ class BlogController extends Controller
   protected function comments()
   {
     $this->data['comments'] = $this->model->getComments($this->param);
-    // if (formulaire validé) {
-    //   $this->model->($_POST);
-    // }
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitCommentaire'])) {
+      array_pop($_POST);
+      $_POST['article_id'] = $this->param[0];
+      var_dump($_POST);
+      $this->model->addComment($_POST);
+    }
   }
 }
