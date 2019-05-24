@@ -49,15 +49,15 @@
         </div>
 
         <div class="row indent">
-          <?php for ($j = 1; $j <= count($users); $j++) { ?>
+          <?php for ($j = 0; $j < count($users); $j++) { ?>
           <div class="col-md-4">
             <div class="card text-white bg-secondary mb-3 team">
-              <a href="#"><img src="<?= $users[0]["url_avatar"] ?>" class="card-img-top"
-                  alt="Photo de <?= $users[0]["url_avatar"] ?>"></a>
+              <a href="#"><img src="<?= $users[$j]["url_avatar"] ?>" class="card-img-top"
+                  alt="Photo de <?= $users[$j]["url_avatar"] ?>"></a>
 
               <div class="card-body">
-                <h2 class="card-title"><a href="#"><?= $users[0]["firstname"] . $users[0]["lastname"] ?></a></h2>
-                <p class="card-text"><?= $users[0]["firstname"] ?></p>
+                <h2 class="card-title"><a href="#"><?= $users[$j]["firstname"] . $users[$j]["lastname"] ?></a></h2>
+                <p class="card-text"><?= $users[$j]["firstname"] ?></p>
               </div>
             </div>
           </div>
