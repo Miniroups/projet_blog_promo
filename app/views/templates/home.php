@@ -54,7 +54,9 @@
       </div>
       <div class="row indent">
         <div class="col-md-12 flex-center">
-          <button type="button" class="btn btn-primary">Charger plus</button>
+          <a href="<?= $publicPath?>/blog">
+            <button type="button" class="btn btn-primary">Charger plus</button>
+          </a>
         </div>
       </div>
 
