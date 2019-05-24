@@ -17,7 +17,7 @@ class BlogController extends Controller
   // liste les articles
   protected function index() {
     $this->template = 'blog/liste-articles';
-    $this->data = $this->model->getAllArticles();
+    $this->data['article'] = $this->model->getAllArticles();
   }
   // URL d'acces à utiliser : /Blog/edit/id
   // param : id de l'article à édit
