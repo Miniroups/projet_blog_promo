@@ -43,9 +43,17 @@ class HomeController extends Controller
   protected function register()
   {
     $this->template = 'user/inscription';
-    // if (formulaire validé) {
-    //   $this->model->($_POST);
-    // }
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitInscription'])) {
+      if ($_POST['password'] === $_POST['confirmPassword']) {
+        $_POST['password'] = Encrypt::md5($_POST['password']);
+        unset($_POST['confirmPassword']);
+        unset($_POST['submitInscription']);
+        var_dump($_POST);
+        $this->model->addUser($_POST);
+      } else {
+        $this->data['error'] = 'les mots de passes ne correspondent pas.';
+      }
+    }
   }
 
   // URL d'acces à utiliser : /home/mentions
