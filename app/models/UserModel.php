@@ -9,7 +9,8 @@ class UserModel extends Model
 {
   public function getAllUsers()
   {
-    return $this->getData('SELECT * FROM users');
+    $stm = $this->getData('SELECT * FROM users');
+    return $stm->fetchAll();
   }
 
   public function getOneUser($userId)
