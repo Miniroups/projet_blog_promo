@@ -27,7 +27,13 @@ class UserModel extends Model
 
   public function updateUser(array $userData)
   {
-    array_push($userData, ['id'=> $_SESSION['userInfos']['id']]);
-    $this->getData('UPDATE users SET firstname = :firstname, lastname = :name,email = :email,login = :identifiant, password = :password, url_avatar = :imageProfil, file = :cvUpload, about = :description WHERE id = :id',$userData);
+    $userData['id'] = $_SESSION['userInfos']['id'];
+    if (isset($userData['password'])) {
+      $this->getData('UPDATE users SET firstname = :firstname, lastname = :name,email = :email,login = :identifiant, password = :password, url_avatar = :imageProfil, file = :cvUpload, about = :description WHERE id = :id',$userData);
+    } else {
+      var_dump('hello');
+      $this->getData('UPDATE users SET firstname = :firstname, lastname = :name,email = :email,login = :identifiant, url_avatar = :imageProfil, file = :cvUpload, about = :description WHERE id = :id',$userData);
+    }
+
   }
 }

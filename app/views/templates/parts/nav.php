@@ -18,7 +18,7 @@
         </li>
         </ul>
         <ul class="navbar-nav">
-            <?php if($_SESSION['connexion']) { ?>
+            <?php if(isset($_SESSION['connexion']) && $_SESSION['connexion'] === true) { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= $publicPath?>/user/profil/<?= $_SESSION['userInfos']['id'] ?>"><i class="fas fa-user"></i> Mon profil</a>
                 </li>

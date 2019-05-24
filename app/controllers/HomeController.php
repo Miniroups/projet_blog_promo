@@ -38,6 +38,11 @@ class HomeController extends Controller
       }
     }
   }
+  protected function logout()
+  {
+    session_destroy();
+    header('Location: '.PUBLIC_PATH.'/home');
+  }
   // URL d'acces à utiliser : /home/register
   // aucun paramètre
   protected function register()

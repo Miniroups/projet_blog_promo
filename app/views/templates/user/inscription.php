@@ -16,11 +16,11 @@
             <div class="row">
                 <div class="col formInput form-group">
                     <label for="password">Mot de passe</label>
-                    <input type="password" placeholder="Votre mot de passe ..." name="password" value="<?= $password = isset($password) ? $password : '' ?>">
+                    <input type="password" placeholder="Votre mot de passe ..." name="password">
                 </div>
                 <div class="col formInput form-group">
                     <label for="confirmPassword">Confirmation mot de passe</label>
-                    <input type="password" placeholder="Confirmaton de votre mot de passe ..." name="confirmPassword" value="<?= $password = isset($password) ? $password : '' ?>">
+                    <input type="password" placeholder="Confirmaton de votre mot de passe ..." name="confirmPassword">
                 </div>
             </div>
             <div class="row">

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 use app\models\UserModel;
+use app\vendor\Encrypt;
 /**
  *
  */
@@ -25,7 +26,7 @@ class UserController extends Controller
     $this->template = 'user/inscription';
     $this->data = $this->model->getOneUser($_SESSION['userInfos']['id']);
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitInscription'])) {
-      if ($_POST['password'] === $_POST['confirmPassword']) {
+      if ($_POST['password'] === $_POST['confirmPassword'] && !empty($_POST['password'])) {
         $_POST['password'] = Encrypt::md5($_POST['password']);
         unset($_POST['confirmPassword']);
       } else {
@@ -33,6 +34,7 @@ class UserController extends Controller
       }
       if (empty($_POST['password'])) {
         unset($_POST['password']);
+        unset($_POST['confirmPassword']);
       }
       unset($_POST['submitInscription']);
       $this->model->updateUser($_POST);
