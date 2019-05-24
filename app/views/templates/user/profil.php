@@ -1,7 +1,7 @@
 <div class="content">
 
     <section id="infos" class="container-fluid">
-        <a href="#" class="btn btn-primary">Editer votre profil</a>
+        <a href="<?= $publicPath?>/user/edit" class="btn btn-primary">Editer votre profil</a>
         <div class="row my-3">
             <div class="col-4" id="avatar">
                 <img src="https://lorempixel.com/500/700/abstract/?12345" alt="Avatar" class="img-fluid">
