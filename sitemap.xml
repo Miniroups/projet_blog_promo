@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>public/home</loc></url>
+
+  <url><loc>public/home/login</loc></url>
+
+  <url><loc>public/home/register</loc></url>
+
+  <url><loc>public/home/mentions</loc></url>
+
+  <url><loc>public/contact</loc></url>
+
+  <url><loc>Blog/</loc></url>
+
+  <url><loc>Blog/new</loc></url>
+
+  <url><loc>Blog/article</loc></url>
+
+
+</urlset>

@@ -2,12 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Footer 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p><a href="http://www.corrtech.fr" target="_blank"><img src="<?= $publicPath ?>/img/corrtech_logo.png" alt="logo-corrtech"></a><img src="<?= $publicPath ?>/img/nav-logo.png" alt="logo-promo"></p>
             </div>
             <div class="col-md-6">
-                <h3>Footer 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <ul>
+                    <li>- <a href="mentions">Mentions légales</a></li>
+                    <li>- <a href="<?= $publicPath ?>/contact">Contact</a></li>
+                    <li>- <a href="#">Plan du site</a></li>
+                </ul>
             </div>
         </div>
     </div>
