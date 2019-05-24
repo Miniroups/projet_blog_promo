@@ -23,16 +23,16 @@
 
         <!-- Ajouter un nouveau commentaire -->
         <div class="new-comment">
-            <form id="form-commentaire" name="form-commentaire" action="#" method="#">
+            <form id="form-commentaire" name="form-commentaire" method="post">
                 <div class="form-group">
                     <label for="name">Nom</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" name="author">
                 </div>
                 <div class="form-group">
                     <label for="content">Commentaire</label>
                     <textarea id="content" name="content" cols="2" class="form-control"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" name="submit-commentaire">Envoyer mon commentaire</button>
+                <button type="submit" class="btn btn-primary" name="submitCommentaire">Envoyer mon commentaire</button>
             </form>
         </div>
 
