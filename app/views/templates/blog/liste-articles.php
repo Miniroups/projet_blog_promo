@@ -8,7 +8,7 @@
               </div>
               <div class="col">
                   <h2><?= $article[0]["title"] ?></h2>
-                  <p><?= $article[0]["content"] ?></p>
+                  <p><?= substr($article[0]["content"], 0, 200) ?></p>
                   <a href="<?= PUBLIC_PATH ?>/blog/article/<?= $article[0]['id'] ?>" class="btn btn-info">Lire l'article !</a>
               </div>
           </div>
@@ -19,7 +19,7 @@
               <?php for($i = 1; $i < count($article); $i++) { ?>
               <div class="col">
                   <a href="<?= PUBLIC_PATH ?>/blog/article/<?= $article[$i]['id']  ?>"><img class="img-fluid" src="<?= $article[$i]["url_img"] ?>" alt="<?= $article[$i]["alt_img"] ?>"></a>
-                  <p><?= $article[$i]["content"] ?></p>
+                  <p><?= substr($article[$i]["content"], 0, 200) ?></p>
                   <a href="<?= PUBLIC_PATH ?>/blog/article/<?= $article[$i]['id']  ?>" class="btn btn-info">Lire l'article !</a>
               </div>
               <?php } ?>
